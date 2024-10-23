@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Image Generator</title>
+    <link rel="stylesheet" href="text_to_image.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Image from Text Prompt</h1>
+
+        <!-- Prompt Input Form -->
+        <form id="promptForm">
+            <label for="prompt">Enter your prompt:</label>
+            <input type="text" id="prompt" name="prompt" placeholder="Enter text to generate an image..." required>
+            <button type="submit">Generate Image</button>
+        </form>
+
+        <!-- Display Area for Generated Image -->
+        <div id="imageContainer">
+            <h2>Generated Image:</h2>
+            <img id="generatedImage" alt="Generated Image will appear here" src="">
+        </div>
+
+        <!-- Display CLIP Results -->
+        <div id="clipResults">
+            <h2>CLIP Analysis Results:</h2>
+            <ul id="clipScores"></ul>
+        </div>
+
+        <!-- Display SAM Results -->
+        <div id="samResults">
+            <h2>SAM Segmentation Results:</h2>
+            <p id="samScores"></p>
+        </div>
+    </div>
+
+    <script src="text_to_image.js"></script>
+</body>
+</html>
